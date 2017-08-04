@@ -5,19 +5,21 @@
     <title>Sample for Rajib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" initial-scale=1>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#scroll").click(function() {
+        $('html, body').animate({
+          scrollTop: 485
+        }, 500);
+      });
+    });
+    </script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Heebo:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $("#scroll").click(function (){
-          $('html, body').animate({
-            scrollTop: $("#footer").offset().top
-          }, 2000);
-        });
-      });
-    </script>
 </head>
 <body>
     <div class="header">
@@ -43,11 +45,34 @@
     <div class="title">
         <h3>HBK</h3>
         <hr>
-        <p class="lead">Creative agency for forward thinking brands</p>
+        <p class="logo_lead">Creative agency for forward thinking brands</p>
     </div>
 
     <div class="big-slogan">
-      <h1>With Knowledge, passion, heart & soul</h1>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <h1>With Knowledge, passion, heart & soul</h1>
+          </div>
+
+          <div class="item">
+            <h1>With Knowledge, passion, heart & soul</h1>
+          </div>
+
+          <div class="item">
+            <h1>With Knowledge, passion, heart & soul</h1>
+          </div>
+        </div>
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      </div>
     </div>
 
     <div class="content">
@@ -81,7 +106,18 @@
         </div>
 
         <div class="awards">
+          <div class="awards-header">
             <h2>Our Awards</h2>
+            <div class="dropdown">
+              <input class="dropdown-toggle" type="text">
+              <div class="dropdown-text">Year</div>
+              <ul class="dropdown-content">
+                <li><a href="#">2017</a></li>
+                <li><a href="#">2016</a></li>
+                <li><a href="#">2015</a></li>
+              </ul>
+            </div>
+          </div>
             <div class="awards-content">
                 <div class="awards-nav">
                     <ul>
@@ -98,19 +134,22 @@
                     <div class="award">
                         <img src="img/es_gold.jpg" alt="">
                         <h5>ES Gold Award</h5>
+                        <p class="detail">Detail</p>
                     </div>
                     <div class="award">
                         <img src="img/oro_2017.jpg" class="img-fluid" alt="">
                         <h5>ORO / 2017</h5>
-                        <!-- <p class="detail">Detail</p> -->
+                        <p class="detail">Detail</p>
                     </div>
                     <div class="award">
                         <img src="img/kc.jpg" alt="">
                         <h5>KC Award</h5>
+                        <p class="detail">Detail</p>
                     </div>
                     <div class="award">
                         <img src="img/co_winner.jpg" alt="">
                         <h5>C&O Winner</h5>
+                        <p class="detail">Detail</p>
                     </div>
                 </div>
             </div>
@@ -203,7 +242,7 @@
             <div class="copyright-left">
                 <h3>HBK</h3>
                 <hr>
-                <p class="lead">Creative agency for forward thinking brands</p>
+                <p class="logo_lead">Creative agency for forward thinking brands</p>
             </div>
             <div class="copyright-right">
                 <p> &copy; 2017 HBK. All Rights Reserved.</p>

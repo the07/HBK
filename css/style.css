@@ -79,14 +79,14 @@ h3 {
 
 hr {
     width: 20px;
-    margin: 22px 10px 0px 10px;
+    margin: 16px 10px 0px 10px;
     align-items: center;
     border-color: #916CFC;
 }
 
-.lead {
+.logo_lead {
     max-width: 220px;
-    margin-top: 12px;
+    margin-top: 8px;
     line-height: 1.7em;
 }
 
@@ -94,6 +94,26 @@ hr {
     width: 70%;
     margin: 0 auto;
     color: #fff;
+}
+
+.carousel {
+        background: none;
+        position: relative;
+        padding: 10px;     /* Shows as a border around the carousel */
+    }
+
+.carousel-caption{
+    position:static;
+}
+
+.carousel-indicators {
+    margin-top: 100px;
+}
+
+.carousel-inner > .item {
+          width: 100%;
+          overflow: hidden;
+          height: 250px;
 }
 
 h1 {
@@ -110,6 +130,7 @@ h1 {
 
 .top {
     display: flex;
+    margin-top: 50px;
 }
 
 .left {
@@ -217,9 +238,123 @@ h1 {
     font-weight: bold;
 }
 
+.awards-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
 .awards {
     padding: 70px 150px;
     background: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 92px;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.dropdown-text {
+  cursor: pointer;
+  position: absolute;
+  text-indent: 10px;
+  line-height: 32px;
+  background-color: #FFC600;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.dropdown-text:after {
+  position: absolute;
+  right: 6px;
+  top: 15px;
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #555 transparent transparent transparent;
+}
+
+.dropdown-text,
+.dropdown-content a {
+  color: #fff;
+}
+
+.dropdown-toggle {
+  font-size: 0;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 1px;
+  background: transparent;
+  text-indent: -10px;
+  height: 34px;
+  width: 100%;
+}
+
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+.dropdown-content {
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+  list-style-type: none;
+  position: absolute;
+  top: 32px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility:hidden;
+  border-radius: 3px;
+  text-indent: 10px;
+  line-height: 32px;
+  background-color: #FFC600;
+  border: 1px solid #ccc;
+  width: 140px;
+}
+
+.dropdown-content a {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #e8e8e8;
+}
+
+
+.dropdown-toggle:hover ~ .dropdown-text,
+.dropdown-toggle:focus ~ .dropdown-text {
+  background-color: #e8e8e8;
+}
+
+.dropdown-toggle:focus ~ .dropdown-text {
+  box-shadow: 0 1px 3px rgba(0,0,0, .2) inset, 0 1px 0 rgba(255,255,255, 0.8);
+  z-index: 2;
+}
+
+.dropdown-toggle:focus ~ .dropdown-text:after {
+  border-width: 0 4px 5px 4px;
+  border-color: transparent transparent #555 transparent;
+}
+
+.dropdown-content:hover,
+.dropdown-toggle:focus ~ .dropdown-content {
+  opacity: 1;
+  visibility:visible;
+  top: 42px;
 }
 
 h2 {
@@ -227,6 +362,7 @@ h2 {
     color: rgb(81, 49, 169);
     font-size: 4.8em;
     font-family: 'Heebo', sans-serif;
+    width: 50%;
 }
 
 .awards-content {
@@ -285,7 +421,6 @@ a {
     position: relative;
     border: 1px solid gray;
     background-color: white;
-    padding-bottom: 50%
 }
 
 .award:before {
@@ -296,6 +431,24 @@ a {
   border-radius: 10%;
   height: 100%;
   width: 100%;
+}
+
+.award:hover {
+  background-color: rgb(241, 75, 89);
+  border: none;
+}
+
+.award:hover::before {
+  border: 1px solid rgb(241, 75, 89);
+  border: none;
+}
+
+.award p {
+  visibility: hidden;
+}
+
+.award:hover p {
+  visibility: visible;
 }
 
 .img-fluid {
@@ -309,14 +462,21 @@ h5 {
     margin-top: 12px;
 }
 
+.award:hover h5 {
+  color: #ffffff;
+  font-size: 1.9em;
+}
+
 .detail {
-    width: 284px;
+    width: 100%;
     text-transform: uppercase;
     margin: 0;
     padding: 10px;
     text-align: center;
     color: #fff;
     background: #FFC600;
+    position: absolute;
+    bottom: 0px;
 }
 
 .bottom {
@@ -349,7 +509,7 @@ h5 {
 .article {
     width: 50%;
     background: #fff;
-    height: 800px;
+    height: 861.75px;
     padding: 90px;
     color: #A8A8A8;
 }
@@ -528,7 +688,7 @@ input:focus {
 }
 
 .copyright-left hr {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .copyright-right {
