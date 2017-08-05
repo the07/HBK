@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <title>Sample for Rajib</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" initial-scale=1>
+    <meta name="viewport" content="width=device-width user-scalable=no" initial-scale=1>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $("#scroll").click(function() {
-        $('html, body').animate({
-          scrollTop: 485
-        }, 500);
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+      jQuery(document).ready(function($) {
+
+        $(".sidebar a").on('click', function(e) {
+
+          e.preventDefault();
+
+          var toShow = $(this).attr('href');
+          $(".awards-name").slideUp();
+          $(toShow).slideDown();
+        });
       });
-    });
     </script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Heebo:400,700" rel="stylesheet">
@@ -38,7 +43,7 @@
                 </ul>
             </nav>
 
-            <div id="talk"><a id="scroll" href="">Let's Talk</a></div>
+            <div id="talk"><a id="scroll" href="#footer">Let's Talk</a></div>
         </div>
     </div>
 
@@ -77,26 +82,26 @@
 
     <div class="content">
         <div class="top">
-            <div class="left">
+            <div class="left" id="fade-top1">
                 <div class="caption bg-pink">
                     <p class="small text-yellow">Illustration</p>
                     <p class="big">Geometry Kings</p>
                 </div>
             </div>
-            <div class="right">
+            <div class="right" id="fade-top2">
                 <div class="right-top">
                     <div class="caption bg-green">
                         <p class="small text-green">Branding</p>
                         <p class="big">Beyond</p>
                     </div>
                 </div>
-                <div class="sub-left">
+                <div class="sub-left" id="fade-top3">
                     <div class="caption bg-blue">
                         <p class="small text-orange">Branding</p>
                         <p class="big">Beyond</p>
                     </div>
                 </div>
-                <div class="sub-right">
+                <div class="sub-right" id="fade-top4">
                     <div class="caption bg-black">
                         <p class="small text-cyan">Branding</p>
                         <p class="big">Beyond</p>
@@ -120,17 +125,17 @@
           </div>
             <div class="awards-content">
                 <div class="awards-nav">
-                    <ul>
-                        <a href="#"><li>Print</li></a>
-                        <a href="#"><li>Branding</li></a>
-                        <a href="#" class="active"><li>Illustration</li></a>
-                        <a href="#"><li>Games</li></a>
-                        <a href="#"><li>Motion</li></a>
-                        <a href="#"><li>Web</li></a>
+                    <ul class="sidebar">
+                        <a href=".content1"><li>Print</li></a>
+                        <a href=".content2"><li>Branding</li></a>
+                        <a href=".content3" class="active"><li>Illustration</li></a>
+                        <a href=".content5"><li>Games</li></a>
+                        <a href=".content6"><li>Motion</li></a>
+                        <a href=".content7"><li>Web</li></a>
                     </ul>
                 </div>
 
-                <div class="awards-name">
+                <div class="content1 awards-name">
                     <div class="award">
                         <img src="img/es_gold.jpg" alt="">
                         <h5>ES Gold Award</h5>
@@ -168,32 +173,34 @@
                     <p class="big">Common Time</p>
                 </div>
             </div>
-            <div class="brand-identity">
-                <img src="img/brand_identity.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="article">
-                <div class="heading">
-                    <span>H</span>
-                    <div class="author">
-                        <h6>Patrick Hawkins</h6>
-                        <p class="desc">Psychologist turned Designer</p>
-                    </div>
-                </div>
-                <div class="article-content">
-                    <div id="time"> Jan 5, 2016 &bullet; 3 Min Read</div>
-                    <p id="title">2017 General Design Trends</p>
-                    <ul class="tag">
-                        <li>Design</li>
-                        <li>UX</li>
-                        <li>Product Design</li>
-                    </ul>
-                    <p>Digital design always solves a problem, otherwise it would be pixel art. Understanding the problem throughly is essential to design successful solutions. Throughly research the problem before coming up with suitable solutions.</p>
-                    <p>Create fewer features, but make them great instead of just good.</p>
-                    <button>Full Article</button>
-                </div>
+            <div class="lower-bottom">
+              <div class="brand-identity">
+                  <img src="img/brand_identity.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="article">
+                  <div class="heading">
+                      <span>H</span>
+                      <div class="author">
+                          <h6>Patrick Hawkins</h6>
+                          <p class="desc">Psychologist turned Designer</p>
+                      </div>
+                  </div>
+                  <div class="article-content">
+                      <div id="time"> Jan 5, 2016 &bullet; 3 Min Read</div>
+                      <p id="title">2017 General Design Trends</p>
+                      <ul class="tag">
+                          <li>Design</li>
+                          <li>UX</li>
+                          <li>Product Design</li>
+                      </ul>
+                      <p>Digital design always solves a problem, otherwise it would be pixel art. Understanding the problem throughly is essential to design successful solutions. Throughly research the problem before coming up with suitable solutions.</p>
+                      <p>Create fewer features, but make them great instead of just good.</p>
+                      <button>Full Article</button>
+                  </div>
+              </div>
             </div>
         </div>
-        <div class="footer" id="footer">
+        <div class="footer" id="footer" name="footer">
             <div class="left-footer">
                 <ul>
                     <li class="mini-title text-red">Agency</li>
@@ -254,3 +261,4 @@
 </body>
 
 </html>
+<!-- Template designed by Gaurav Singh for Griseos -->

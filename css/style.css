@@ -92,15 +92,14 @@ hr {
 
 .big-slogan {
     width: 70%;
-    margin: 0 auto;
+    margin: 70px auto;
     color: #fff;
 }
 
 .carousel {
-        background: none;
-        position: relative;
-        padding: 10px;     /* Shows as a border around the carousel */
-    }
+    position: relative;
+    padding: 10px;     /* Shows as a border around the carousel */
+}
 
 .carousel-caption{
     position:static;
@@ -108,12 +107,19 @@ hr {
 
 .carousel-indicators {
     margin-top: 100px;
+
+}
+
+.carousel-indicators li {
+  border-radius: 0;
+  border-color: black;
 }
 
 .carousel-inner > .item {
           width: 100%;
           overflow: hidden;
           height: 250px;
+          background: none;
 }
 
 h1 {
@@ -131,6 +137,10 @@ h1 {
 .top {
     display: flex;
     margin-top: 50px;
+}
+
+.hidden-top {
+  visibility: hidden;
 }
 
 .left {
@@ -249,13 +259,17 @@ h1 {
     background: #fff;
 }
 
+.awards h2 {
+  width: auto;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
   text-align: left;
   width: 92px;
-  margin-top: 3%;
-  margin-left: 2%;
+  margin-top: 2%;
+  margin-left: 1%;
 }
 
 .dropdown-text {
@@ -397,9 +411,6 @@ h2 {
     background-repeat: no-repeat;
     background-size: 12px;
     padding-right: 10px;
-}
-
-a {
     text-decoration: none;
 }
 
@@ -408,6 +419,10 @@ a {
     flex-wrap: wrap;
     margin-left: 150px;
     width: 70%;
+}
+
+a {
+    text-decoration: none;
 }
 
 .award {
@@ -500,6 +515,12 @@ h5 {
     align-items: flex-end;
     background: rgba(208, 58, 60, .9);
     background-size: cover;
+}
+
+.lower-bottom {
+  display: flex;
+  max-height: 861px;
+  overflow: hidden;
 }
 
 .brand-identity {
