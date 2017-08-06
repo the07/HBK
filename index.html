@@ -8,22 +8,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script>
-      jQuery(document).ready(function($) {
-
-        $(".sidebar a").on('click', function(e) {
-
-          e.preventDefault();
-
-          var toShow = $(this).attr('href');
-          $(".awards-name").slideUp();
-          $(toShow).slideDown();
-        });
-      });
-    </script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <link href="css/splitscreen.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Heebo:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.oss" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -47,17 +37,17 @@
         </div>
     </div>
 
-    <div class="title">
+    <div class="title box" data-scroll-speed="25">
         <h3>HBK</h3>
         <hr>
-        <p class="logo_lead">Creative agency for forward thinking brands</p>
+        <p class="logo_lead" id="msg"></p>
     </div>
 
     <div class="big-slogan">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner box" data-scroll-speed="3">
           <div class="item active">
             <h1>With Knowledge, passion, heart & soul</h1>
           </div>
@@ -72,7 +62,7 @@
         </div>
 
         <!-- Indicators -->
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators box" data-scroll-speed="15">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -82,26 +72,26 @@
 
     <div class="content">
         <div class="top">
-            <div class="left" id="fade-top1">
+            <div class="left box" id="fade-top1" data-scroll-speed="1">
                 <div class="caption bg-pink">
                     <p class="small text-yellow">Illustration</p>
                     <p class="big">Geometry Kings</p>
                 </div>
             </div>
             <div class="right" id="fade-top2">
-                <div class="right-top">
+                <div class="right-top box" data-scroll-speed="6">
                     <div class="caption bg-green">
                         <p class="small text-green">Branding</p>
                         <p class="big">Beyond</p>
                     </div>
                 </div>
-                <div class="sub-left" id="fade-top3">
+                <div class="sub-left box" id="fade-top3" data-scroll-speed="8">
                     <div class="caption bg-blue">
                         <p class="small text-orange">Branding</p>
                         <p class="big">Beyond</p>
                     </div>
                 </div>
-                <div class="sub-right" id="fade-top4">
+                <div class="sub-right box" id="fade-top4" data-scroll-speed="3">
                     <div class="caption bg-black">
                         <p class="small text-cyan">Branding</p>
                         <p class="big">Beyond</p>
@@ -110,7 +100,7 @@
             </div>
         </div>
 
-        <div class="awards">
+        <div class="awards box" data-scroll-speed="10">
           <div class="awards-header">
             <h2>Our Awards</h2>
             <div class="dropdown">
@@ -129,49 +119,169 @@
                         <a href=".content1"><li>Print</li></a>
                         <a href=".content2"><li>Branding</li></a>
                         <a href=".content3" class="active"><li>Illustration</li></a>
-                        <a href=".content5"><li>Games</li></a>
-                        <a href=".content6"><li>Motion</li></a>
-                        <a href=".content7"><li>Web</li></a>
+                        <a href=".content4"><li>Games</li></a>
+                        <a href=".content5"><li>Motion</li></a>
+                        <a href=".content6"><li>Web</li></a>
                     </ul>
                 </div>
 
-                <div class="content1 awards-name">
-                    <div class="award">
-                        <img src="img/es_gold.jpg" alt="">
-                        <h5>ES Gold Award</h5>
-                        <p class="detail">Detail</p>
-                    </div>
-                    <div class="award">
-                        <img src="img/oro_2017.jpg" class="img-fluid" alt="">
-                        <h5>ORO / 2017</h5>
-                        <p class="detail">Detail</p>
-                    </div>
-                    <div class="award">
-                        <img src="img/kc.jpg" alt="">
-                        <h5>KC Award</h5>
-                        <p class="detail">Detail</p>
-                    </div>
-                    <div class="award">
-                        <img src="img/co_winner.jpg" alt="">
-                        <h5>C&O Winner</h5>
-                        <p class="detail">Detail</p>
-                    </div>
+                <div class="awards-category">
+                  <div class="content1 awards-name">
+                      <div class="award">
+                          <img src="img/es_gold.jpg" alt="">
+                          <h5>Print Award 1</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/oro_2017.jpg" class="img-fluid" alt="">
+                          <h5>Print Award 2</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/kc.jpg" alt="">
+                          <h5>Print Award 3</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/co_winner.jpg" alt="">
+                          <h5>Print Award 4</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                  </div>
+
+                  <div class="content2 awards-name">
+                      <div class="award">
+                          <img src="img/es_gold.jpg" alt="">
+                          <h5>Brading Award 1</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/oro_2017.jpg" class="img-fluid" alt="">
+                          <h5>Brading Award 27</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/kc.jpg" alt="">
+                          <h5>Brading Award 3</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/co_winner.jpg" alt="">
+                          <h5>Brading Award 4</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                  </div>
+
+                  <div class="content3 awards-name">
+                      <div class="award">
+                          <img src="img/es_gold.jpg" alt="">
+                          <h5>Illustration Award 1</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/oro_2017.jpg" class="img-fluid" alt="">
+                          <h5>Illustration Award 2</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/kc.jpg" alt="">
+                          <h5>Illustration Award 3</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/co_winner.jpg" alt="">
+                          <h5>Illustration Award 4</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                  </div>
+
+                  <div class="content4 awards-name">
+                      <div class="award">
+                          <img src="img/es_gold.jpg" alt="">
+                          <h5>Games Award 1</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/oro_2017.jpg" class="img-fluid" alt="">
+                          <h5>Games Award 2</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/kc.jpg" alt="">
+                          <h5>Games Award 3</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/co_winner.jpg" alt="">
+                          <h5>Games Award 4</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                  </div>
+
+                  <div class="content5 awards-name">
+                      <div class="award">
+                          <img src="img/es_gold.jpg" alt="">
+                          <h5>Motion Award 1</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/oro_2017.jpg" class="img-fluid" alt="">
+                          <h5>Motion Award 2</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/kc.jpg" alt="">
+                          <h5>Motion Award 3</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/co_winner.jpg" alt="">
+                          <h5>Motion Award 4</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                  </div>
+
+                  <div class="content6 awards-name">
+                      <div class="award">
+                          <img src="img/es_gold.jpg" alt="">
+                          <h5>Web Award 1</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/oro_2017.jpg" class="img-fluid" alt="">
+                          <h5>Web Award 2</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/kc.jpg" alt="">
+                          <h5>Web Award 3</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                      <div class="award">
+                          <img src="img/co_winner.jpg" alt="">
+                          <h5>Web Award 4</h5>
+                          <p class="detail">Detail</p>
+                      </div>
+                  </div>
                 </div>
+
             </div>
         </div>
 
         <div class="bottom">
-            <div class="ios-design">
+            <div class="ios-design box" data-scroll-speed="12">
+              <button class="bottom-button">Click here</button>
                 <div class="caption bg-black">
                     <p class="small text-green">iOS Design</p>
                     <p class="big">BP&XO Consulting</p>
                 </div>
             </div>
-            <div class="art-book">
+            <div class="art-book box" data-scroll-speed="12">
                 <div class="caption bg-red">
                 <p class="small text-yellow">Art Book</p>
                     <p class="big">Common Time</p>
                 </div>
+                <button class="bottom-button">Click here</button>
             </div>
             <div class="lower-bottom">
               <div class="brand-identity">
@@ -200,6 +310,7 @@
               </div>
             </div>
         </div>
+
         <div class="footer" id="footer" name="footer">
             <div class="left-footer">
                 <ul>

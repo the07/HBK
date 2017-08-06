@@ -414,11 +414,39 @@ h2 {
     text-decoration: none;
 }
 
+.awards-category {
+  width: 100%;
+}
+
 .awards-name {
     display: flex;
     flex-wrap: wrap;
     margin-left: 150px;
     width: 70%;
+}
+
+.content1 {
+  display: none;
+}
+
+.content2 {
+  display: none;
+}
+
+.content3 {
+  display: none;
+}
+
+.content4 {
+  display: none;
+}
+
+.content5 {
+  display: none;
+}
+
+.content6 {
+  display: none;
 }
 
 a {
