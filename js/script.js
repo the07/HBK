@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
 
+  $('.awards').scrollFadeOut(500);
+  $('.awards').scrollFadeIn(500,500);
+
   var showText = function (target, message, index, interval) {
     if (index < message.length) {
       $(target).append(message[index++]);
